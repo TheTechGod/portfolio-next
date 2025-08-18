@@ -1,0 +1,14 @@
+import Link from "next/link";
+
+export default function BlogPage() {
+  return (
+    <div className="container section">
+      <h1 className="mb-4">Blog</h1>
+      <ul>
+        <li>
+          <Link href="/blog/first-post">How I built a .NET blog with EF Core and S3</Link>
+        </li>
+      </ul>
+    </div>
+  );
+}
