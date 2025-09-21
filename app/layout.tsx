@@ -1,17 +1,21 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.scss";
-import type { ReactNode } from "react";
-import SiteNavbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// app/layout.tsx
+import './globals.css';
+import type { Metadata } from 'next';
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export const metadata: Metadata = {
+  title: "Integrity Programming \u2013 Portfolio",
+  description: "Geoff Metzger \u2013 Developer Portfolio for Integrity Programming",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+      </head>
       <body>
-        <SiteNavbar />
-        <main>{children}</main>
-        <Footer />
+        {children}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
       </body>
     </html>
   );
