@@ -1,4 +1,3 @@
-@"
 "use client";
 import Link from "next/link";
 
@@ -31,4 +30,4 @@ export default function SiteNavbar() {
     </nav>
   );
 }
-"@ | Set-Content -Encoding utf8 .\app\components\Navbar.tsx
+
