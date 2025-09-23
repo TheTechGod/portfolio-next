@@ -2,10 +2,9 @@
 
 import { useEffect } from "react";
 import Reveal from "./components/Reveal";
-import Link from "next/link";
 
 export default function HomePage() {
-  // Smooth scroll + close mobile menu after clicking a hash link
+  // Smooth scroll + close mobile menu on click
   useEffect(() => {
     const handler = (e: Event) => {
       const a = e.currentTarget as HTMLAnchorElement;
@@ -58,37 +57,17 @@ export default function HomePage() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#about">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#projects">
-                  Projects
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#skills">
-                  Skills
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#resume">
-                  Resume
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#contact">
-                  Contact
-                </a>
-              </li>
+              <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
+              <li className="nav-item"><a className="nav-link" href="#projects">Projects</a></li>
+              <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
+              <li className="nav-item"><a className="nav-link" href="#resume">Resume</a></li>
+              <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
             </ul>
           </div>
         </div>
       </nav>
 
-      {/* Top anchor / spacer so #home doesn’t hide behind fixed nav */}
+      {/* Top anchor / spacer so #home isn’t hidden under fixed nav */}
       <div id="home" className="nav-spacer" />
 
       {/* About */}
@@ -97,10 +76,9 @@ export default function HomePage() {
           <div className="container">
             <h2>About Me</h2>
             <p>
-              Hi, I’m Geoff Metzger. I build educational platforms, freelance
-              automation tools, and clean web apps under the Integrity
-              Programming brand. Everything I create is rooted in purpose and
-              real-world impact.
+              Hi, I’m Geoff Metzger. I build educational platforms, freelance automation tools,
+              and clean web apps under the Integrity Programming brand. Everything I create is
+              rooted in purpose and real-world impact.
             </p>
           </div>
         </div>
@@ -141,120 +119,48 @@ export default function HomePage() {
                 </div>
               </div>
 
+              {/* Blog CMS (placeholder image) */}
+              <div className="col-md-4">
+                <div className="card h-100">
+                  <img
+                    src="https://placehold.co/600x400?text=Blog+CMS"
+                    className="card-img-top"
+                    alt="Blog CMS placeholder"
+                    loading="lazy"
+                  />
+                  <div className="card-body d-flex flex-column">
+                    <h5 className="card-title">Blog CMS</h5>
+                    <p className="card-text">
+                      CRUD blog admin with S3 image uploads. Clean authoring workflow and
+                      role-based access.
+                    </p>
+                    <div className="mt-auto">
+                      <a href="#" className="btn btn-primary">Case Study</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-{/* Blog CMS */}
-<div className="col-md-4">
-  <div className="card h-100">
-    <img
-      src="https://placehold.co/600x400?text=Blog+CMS"
-      className="card-img-top"
-      alt="Blog CMS placeholder"
-      loading="lazy"
-    />
-    <div className="card-body d-flex flex-column">
-      <h5 className="card-title">Blog CMS</h5>
-      <p className="card-text">
-        CRUD blog admin with S3 image uploads. Clean authoring workflow and
-        role-based access.
-      </p>
-      <div className="mt-auto">
-        <a href="#" className="btn btn-primary">Case Study</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-{/* AWS Microsites */}
-<div className="col-md-4">
-  <div className="card h-100">
-    <img
-      src="https://placehold.co/600x400?text=AWS+Microsites"
-      className="card-img-top"
-      alt="AWS Microsites placeholder"
-      loading="lazy"
-    />
-    <div className="card-body d-flex flex-column">
-      <h5 className="card-title">AWS Microsites</h5>
-      <p className="card-text">
-        Presigned URL demo + Serverless TODO mock using API Gateway &amp; Lambda.
-      </p>
-      <div className="mt-auto">
-        <a href="#" className="btn btn-primary">Case Study</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-{/* Resume Section */}
-<section id="resume" className="py-5 text-center">
-  <div className="container">
-    <h2>Resume</h2>
-    {/* Commented out until resume.pdf is added */}
-    {/*
-    <a
-      href="/resume.pdf"
-      target="_blank"
-      rel="noopener"
-      className="btn btn-outline-dark"
-    >
-      Download PDF
-    </a>
-    */}
-    <p className="text-muted mb-0">Resume coming soon</p>
-  </div>
-</section>
-
-              {/* Blog CMS */}
-              {/*
-  <div className="col-md-4">
-    <div className="card h-100">
-      <img
-        src="/assets/blog-cms-thumb.jpg"
-        className="card-img-top"
-        alt="Screenshot of Blog CMS demo"
-        loading="lazy"
-      />
-      <div className="card-body d-flex flex-column">
-        <h5 className="card-title">Blog CMS</h5>
-        <p className="card-text">
-          CRUD blog admin with S3 image uploads. Clean authoring
-          workflow and role-based access.
-        </p>
-        <div className="mt-auto">
-          <Link href="/case-studies/blog-cms" className="btn btn-primary">
-            Case Study
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-*/}
-
-              {/* AWS Microsites */}
-              {/*
-  <div className="col-md-4">
-    <div className="card h-100">
-      <img
-        src="/assets/aws-micros-thumb.jpg"
-        className="card-img-top"
-        alt="Screenshot of AWS microsites"
-        loading="lazy"
-      />
-      <div className="card-body d-flex flex-column">
-        <h5 className="card-title">AWS Microsites</h5>
-        <p className="card-text">
-          Presigned URL demo + Serverless TODO mock using API
-          Gateway &amp; Lambda.
-        </p>
-        <div className="mt-auto">
-          <Link href="/case-studies/aws-micros" className="btn btn-primary">
-            Case Study
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-*/}
+              {/* AWS Microsites (placeholder image) */}
+              <div className="col-md-4">
+                <div className="card h-100">
+                  <img
+                    src="https://placehold.co/600x400?text=AWS+Microsites"
+                    className="card-img-top"
+                    alt="AWS Microsites placeholder"
+                    loading="lazy"
+                  />
+                  <div className="card-body d-flex flex-column">
+                    <h5 className="card-title">AWS Microsites</h5>
+                    <p className="card-text">
+                      Presigned URL demo + Serverless TODO mock using API Gateway &amp; Lambda.
+                    </p>
+                    <div className="mt-auto">
+                      <a href="#" className="btn btn-primary">Case Study</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -266,26 +172,18 @@ export default function HomePage() {
           <div className="container">
             <h2>Skills</h2>
             <p>
-              HTML • CSS • JavaScript • C# • .NET Core • SQL • Entity Framework •
-              Bootstrap • AWS • Git
+              HTML • CSS • JavaScript • C# • .NET Core • SQL • Entity Framework • Bootstrap • AWS • Git
             </p>
           </div>
         </div>
       </Reveal>
 
-      {/* Resume */}
+      {/* Resume (single “coming soon” message) */}
       <Reveal>
         <div id="resume" className="py-5 text-center">
           <div className="container">
             <h2>Resume</h2>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener"
-              className="btn btn-outline-dark"
-            >
-              Download PDF
-            </a>
+            <p className="text-muted mb-0">Resume coming soon</p>
           </div>
         </div>
       </Reveal>
@@ -297,9 +195,7 @@ export default function HomePage() {
             <h2>Contact</h2>
             <p>
               Email:{" "}
-              <a href="mailto:gmetzger1911@gmail.com">
-                gmetzger1911@gmail.com
-              </a>
+              <a href="mailto:gmetzger1911@gmail.com">gmetzger1911@gmail.com</a>
             </p>
           </div>
         </div>
@@ -314,3 +210,4 @@ export default function HomePage() {
     </>
   );
 }
+
