@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root { --nav-height: 64px; }
 * { box-sizing: border-box; }
 body { padding-top: var(--nav-height); }
@@ -86,11 +85,13 @@ footer {
 }
 
 /* Scroll reveal effect */
+/*
 .hidden {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease-out;
 }
+*/
 
 .show {
   opacity: 1;
@@ -106,6 +107,4 @@ footer {
   .card { margin-bottom: 20px; }
 }
 /* TEMP */
-/*
 .hidden { opacity: 1 !important; transform: none !important; }
-*/
